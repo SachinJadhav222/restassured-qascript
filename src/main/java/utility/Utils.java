@@ -10,7 +10,7 @@ public class Utils {
             FileReader reader=new FileReader("src/main/resources/secret_keys.properties");
             Properties p=new Properties();
             p.load(reader);
-            System.out.println(p.getProperty(property));
+           // System.out.println(p.getProperty(property));
             returnValue=p.getProperty(property);
            // logger.info("Secret Key file called for KEYS");
         }

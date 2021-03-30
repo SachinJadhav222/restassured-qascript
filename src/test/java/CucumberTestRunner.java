@@ -4,8 +4,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/features/GitHubGetRepos.feature"},
-        glue={"src/test/java"}
+        features = {"src/test/java/com/featureFiles"},
+        glue={"com.steps"}
 )
 public class CucumberTestRunner {
 }
