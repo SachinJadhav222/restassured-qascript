@@ -2,3 +2,4 @@
 ./.idea
 target
 ./target
+/src/main/resources/secret_keys.properties

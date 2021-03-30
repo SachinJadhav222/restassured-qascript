@@ -1,12 +1,13 @@
-package qascripts;
+package com.qascripts;
 
 import org.junit.Test;
+import utility.Utils;
 
 import static io.restassured.RestAssured.given;
 
 public class GitHubOAuthAPI {
-    public String API_TOKEN="833a6ca4f2eae66e1ac4df8ea87f0747a9f1b10d";
     public String baseURL="https://api.github.com";
+    public String API_TOKEN= Utils.getProperties("git_token");
 
     @Test
     public void verifyRepos(){

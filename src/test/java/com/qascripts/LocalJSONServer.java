@@ -1,4 +1,4 @@
-package qascripts;
+package com.qascripts;
 
 import io.restassured.http.ContentType;
 import org.junit.Test;

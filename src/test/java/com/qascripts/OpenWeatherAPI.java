@@ -1,13 +1,14 @@
-package qascripts;
+package com.qascripts;
 
 import org.junit.Assert;
 import org.junit.Test;
+import utility.Utils;
 
 import static io.restassured.RestAssured.given;
 
 public class OpenWeatherAPI {
     public String URL = "http://api.openweathermap.org/data/2.5/weather";
-    public String API_KEY = "db7d5f609a876b02b5b9181293b46f73";
+    public String API_KEY = Utils.getProperties("open_weather_api_key");
     public String cityName = "mumbai";
 
     @Test

@@ -1,16 +1,18 @@
-package qascripts;
+package com.qascripts;
 
 import org.junit.Test;
+import utility.Utils;
 
 import static io.restassured.RestAssured.given;
 
 public class BasicAuth {
     public String URL="http://postman-echo.com/basic-auth";
-    public String USERNAME="postman";
-    public String PASSWORD="password";
+    public String USERNAME= Utils.getProperties("postman_username");
+    public String PASSWORD=Utils.getProperties("postman_password");
 
     @Test
     public void basicPreemptiveAuth(){
+
         given()
                 .auth()
                 .preemptive()
