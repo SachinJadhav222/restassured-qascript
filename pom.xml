@@ -63,8 +63,29 @@
             <artifactId>cucumber-core</artifactId>
             <version>6.10.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+        <dependency>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.8.0.2131</version>
+        </dependency>
+
 
     </dependencies>
-
+    <profiles>
+    <profile>
+        <id>sonar</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <properties>
+            <!-- Optional URL to server. Default value is http://localhost:9000 -->
+            <sonar.host.url>
+                http://localhost:9000
+            </sonar.host.url>
+            <sonar.login>3c024f6a0696fad7c29f81b10abd94ec51493676</sonar.login>
+        </properties>
+    </profile>
+</profiles>
 
 </project>
