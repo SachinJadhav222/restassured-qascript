@@ -11,6 +11,11 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+
+            <sonar.projectKey>SachinJadhav222_rest-api-bdd-test</sonar.projectKey>
+            <sonar.organization>sachinjadhav222</sonar.organization>
+            <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
@@ -69,9 +74,16 @@
             <artifactId>sonar-maven-plugin</artifactId>
             <version>3.8.0.2131</version>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
 
 
     </dependencies>
+
     <profiles>
     <profile>
         <id>sonar</id>
